@@ -31,6 +31,9 @@ echo 404=$(db_get 404)
 echo $(db_remove age)
 echo age=$(db_get age)
 
+db_change name misha
+echo name=$(db_get name)
+
  
 echo DATBASE contents
 # key,key1

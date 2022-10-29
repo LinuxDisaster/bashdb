@@ -56,3 +56,7 @@ function db_get() {
 function db_remove() {
   db_set $1 ""
 }
+
+function db_change() {
+  db_set $1 $2
+}
