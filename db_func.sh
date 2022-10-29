@@ -62,6 +62,9 @@ function db_change() {
 }
 
 function db_get_key() {
+  head -$1 "$DATABASE_FILE" | tail +$1 | sed -e "s/,[a-z]*//"
+}
+
+function db_show() {
   
-  head -$1 "$DATABASE_FILE" | tail +$1 | grep "^[a-z]*[^,]"
 }
