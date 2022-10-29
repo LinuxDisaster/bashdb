@@ -41,3 +41,5 @@ echo DATBASE contents
 # name,helloacm 
 # age,20
 cat "$DATABASE_FILE"
+echo "#---------------------"
+echo key=$(db_get_key 3)

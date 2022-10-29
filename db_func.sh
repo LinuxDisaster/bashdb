@@ -60,3 +60,8 @@ function db_remove() {
 function db_change() {
   db_set $1 $2
 }
+
+function db_get_key() {
+  
+  head -$1 "$DATABASE_FILE" | tail +$1 | grep "^[a-z]*[^,]"
+}
