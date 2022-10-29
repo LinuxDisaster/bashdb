@@ -42,4 +42,4 @@ echo DATBASE contents
 # age,20
 cat "$DATABASE_FILE"
 echo "#---------------------"
-echo key=$(db_get_key 3)
+db_show

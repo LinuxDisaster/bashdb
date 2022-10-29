@@ -62,9 +62,31 @@ function db_change() {
 }
 
 function db_get_key() {
-  head -$1 "$DATABASE_FILE" | tail +$1 | sed -e "s/,[a-z]*//"
+  head -$1 "$DATABASE_FILE" | tail +$1 | sed -e "s/,[A-Za-z0-9]*//"
 }
 
 function db_show() {
+  #list_of_keys=$(sed "s/,[A-Za-z0-9\n\r]*//" "$DATABASE_FILE")
+  #echo "$list_of_keys"
+  #len=${#list_of_keys[@]}
+  len=0
+  for key in $(sed -e "s/,[A-Za-z0-9]*//" "$DATABASE_FILE" | sort -u)
+  do
+  if  [ ! -z "$(db_get $key)" ]; then
+    (( len++ ))
+    echo "$key, $(db_get $key)"
+  fi
+  done
+  #echo $len
+}
+
+function db_show_2() {
+  #local list_of_keys=$(sed -e "s/,[A-Za-z0-9]*//" "$DATABASE_FILE")
+  #len=${#list_of_keys[@]}
   
+  for (( i=0; i < len; i++ ))
+  do
+    
+    echo "$list_of_keys[i], $(db_get $list_of_keys[i])"
+  done
 }
