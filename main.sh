@@ -10,9 +10,9 @@ source "$DB_FUNC"
 #begin of input/output
 db_clear
  
-db_set keyyyyyyyyy key11111111111
+db_set keyyyy key111
 # key=key1
-echo key=$(db_get key)  
+echo keyyyy=$(db_get keyyyy)  
  
 db_set key key2
 # key=key2
@@ -24,9 +24,13 @@ db_set age 20
 # name=helloacm
 echo name=$(db_get name)
 # age=20
-echo age=$(db_get age) 
+echo age=$(db_get age)
 # 404=
 echo 404=$(db_get 404)
+
+echo $(db_remove age)
+echo age=$(db_get age)
+
  
 echo DATBASE contents
 # key,key1
