@@ -2,8 +2,8 @@
 
 DATABASE_FILE=.database
 
-let MAX_SIZE_OF_KEY=10
-let MAX_SIZE_OF_VALUE=10
+let MAX_SIZE_OF_KEY=128
+let MAX_SIZE_OF_VALUE=2048
 #let NULL="Not found"
 
 function check_key() {

@@ -34,7 +34,7 @@ function is_empty_value() {
 
 
 case "$1" in
-"set") 
+"-set") 
 	#echo "Found set option"
 	key="$2"
 	value="$3"
@@ -44,7 +44,7 @@ case "$1" in
 		exit
 	fi
 ;;
-"change") 
+"-change") 
 	#echo "Found set option"
 	key="$2"
 	value="$3"
@@ -54,7 +54,7 @@ case "$1" in
 		exit
 	fi
 ;;
-"remove") 
+"-remove") 
 	#echo "Found set option"
 	key="$2"
 	if is_empty_key $key; then
@@ -63,7 +63,7 @@ case "$1" in
 		exit
 	fi
 ;;
-"get")
+"-get")
 	shift
 	if (( $# <= 1 )); then
 		key="$1"
@@ -85,19 +85,19 @@ case "$1" in
 		fi
 	fi
 ;;
-"show") 
+"-show") 
 	#echo "Found set option"
 	db_show
 ;;
-"head") 
+"-head") 
 	rows="$2"
 	db_head $rows
 ;;
-"tail") 
+"-tail") 
 	rows="$2"
 	db_tail $rows
 ;;
-"clear") 
+"-clear") 
 	db_clear
 ;;
 *)
