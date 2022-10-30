@@ -1,0 +1,31 @@
+Format: 1.8
+Date: Sun, 30 Oct 2022 19:17:28 +0400
+Source: bashdb
+Binary: bashdb
+Architecture: source all
+Version: 0.1-1
+Distribution: unstable
+Urgency: medium
+Maintainer: Golozubov <golozubovms@unknown>
+Changed-By: unknown <golozubovms@unknown>
+Description:
+ bashdb     - Test task for KB-1
+Changes:
+ bashdb (0.1-1) unstable; urgency=medium
+ .
+   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+Checksums-Sha1:
+ 50a31e8a61bb69fd9e33d2e0054d63d637c82c4a 551 bashdb_0.1-1.dsc
+ bfbf88fb708000bcebafdfd65ca635f3ff9c643e 8832 bashdb_0.1-1.tar.xz
+ 55fe6f390389e742c95c22096a204d823f44e92a 2312 bashdb_0.1-1_all.deb
+ c5d6890e990ac38a8c56dbdeb14dc7d305d3c3f2 5376 bashdb_0.1-1_amd64.buildinfo
+Checksums-Sha256:
+ 38f9c2bf249e99cb830e379559938955f267252de28f6863737dfb4214c85714 551 bashdb_0.1-1.dsc
+ 03c8eb35d30e0c95d6d12f6e940de0ad25734a5130db46062d30c73393704d64 8832 bashdb_0.1-1.tar.xz
+ f73339956e368664c7a3c5ad829000165a33713fa79d6ed9174ba26751156910 2312 bashdb_0.1-1_all.deb
+ 19bcb6c2196e5f97d5bcb620a4d89c5608710d064513a9df7a0ed3173fa1d8c9 5376 bashdb_0.1-1_amd64.buildinfo
+Files:
+ 3b278bef25231ecfddbec98a7e765a5d 551 unknown optional bashdb_0.1-1.dsc
+ c0f30664bf9ee97af3105cc58ef46695 8832 unknown optional bashdb_0.1-1.tar.xz
+ 27392730447a5f497b46941c7490736a 2312 unknown optional bashdb_0.1-1_all.deb
+ cc1a32c7569b67694b9915a1a36f7fbe 5376 unknown optional bashdb_0.1-1_amd64.buildinfo

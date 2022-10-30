@@ -1,0 +1,14 @@
+Source: bashdb
+Section: unknown
+Priority: optional
+Maintainer: Golozubov <golozubovms@unknown>
+Build-Depends: debhelper-compat (= 12)
+Standards-Version: 4.4.1
+Homepage: <insert the upstream URL, if relevant>
+#Vcs-Browser: https://salsa.debian.org/debian/bashdb
+#Vcs-Git: https://salsa.debian.org/debian/bashdb.git
+
+Package: bashdb
+Architecture: all
+Depends: ${misc:Depends}
+Description: Test task for KB-1
