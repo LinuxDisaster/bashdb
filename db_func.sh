@@ -36,15 +36,16 @@ function is_less() {
 function db_clear() {
   rm -f "$DATABASE_FILE"
 }
- 
+
 function db_set() {
   if check_key $1 && check_value $2; then
     echo "$1,$2" >> "$DATABASE_FILE"
+	echo "$1,$2"
   else
     exit
   fi
 }
- 
+
 function db_get() {
   grep "^$1," "$DATABASE_FILE" | sed -e "s/^$1,//" | tail -n 1 #; then
     #echo "$1 key is in DB"
@@ -52,7 +53,7 @@ function db_get() {
     #echo "$1 key is not in DB"
   #fi
 }
- 
+
 function db_remove() {
   db_set $1 ""
 }

@@ -9,8 +9,10 @@ source "$DB_FUNC"
 
 #begin of input/output
 db_clear
- 
-db_set keyyyy key111
+
+key=keyyyy
+value=value11
+db_set $key $value
 # key=key1
 echo keyyyy=$(db_get keyyyy)  
  
@@ -44,6 +46,6 @@ cat "$DATABASE_FILE"
 echo "---------db_show---------"
 db_show
 echo "---------db_head---------"
-db_head 3
+db_head 2
 echo "---------db_tail---------"
 db_tail 2
