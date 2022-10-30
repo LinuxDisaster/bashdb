@@ -43,5 +43,7 @@ echo DATBASE contents
 cat "$DATABASE_FILE"
 echo "---------db_show---------"
 db_show
-echo "---------db_show_head---------"
-db_show_head 3
+echo "---------db_head---------"
+db_head 3
+echo "---------db_tail---------"
+db_tail 2

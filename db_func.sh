@@ -75,7 +75,12 @@ function db_show() {
   done
 }
 
-function db_show_head() {
+function db_head() {
   db_list=$(db_show)
   echo $(head -$1 <<< $db_list) | tr ' ' '\n'
+}
+
+function db_tail() {
+  db_list=$(db_show)
+  echo $(tail +$1 <<< $db_list) | tr ' ' '\n'
 }
