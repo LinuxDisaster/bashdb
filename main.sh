@@ -41,5 +41,7 @@ echo DATBASE contents
 # name,helloacm 
 # age,20
 cat "$DATABASE_FILE"
-echo "#---------------------"
+echo "---------db_show---------"
 db_show
+echo "---------db_show_head---------"
+db_show_head 3

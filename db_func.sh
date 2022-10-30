@@ -66,27 +66,16 @@ function db_get_key() {
 }
 
 function db_show() {
-  #list_of_keys=$(sed "s/,[A-Za-z0-9\n\r]*//" "$DATABASE_FILE")
-  #echo "$list_of_keys"
-  #len=${#list_of_keys[@]}
-  len=0
+  lenght_of_list=$(wc -w <<< $list_of_keys)
   for key in $(sed -e "s/,[A-Za-z0-9]*//" "$DATABASE_FILE" | sort -u)
   do
   if  [ ! -z "$(db_get $key)" ]; then
-    (( len++ ))
-    echo "$key, $(db_get $key)"
+    echo "$key,$(db_get $key)"
   fi
   done
-  #echo $len
 }
 
-function db_show_2() {
-  #local list_of_keys=$(sed -e "s/,[A-Za-z0-9]*//" "$DATABASE_FILE")
-  #len=${#list_of_keys[@]}
-  
-  for (( i=0; i < len; i++ ))
-  do
-    
-    echo "$list_of_keys[i], $(db_get $list_of_keys[i])"
-  done
+function db_show_head() {
+  db_list=$(db_show)
+  echo $(head -$1 <<< $db_list) | tr ' ' '\n'
 }
