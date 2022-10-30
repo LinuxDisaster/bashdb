@@ -47,7 +47,12 @@ function db_set() {
 }
 
 function db_get() {
-  grep "^$1," "$DATABASE_FILE" | sed -e "s/^$1,//" | tail -n 1 #; then
+	value=$(grep "^$1," "$DATABASE_FILE" | sed -e "s/^$1,//" | tail -n 1)
+	if [ ! -z "$value" ]; then
+		echo $value
+	else
+		echo "Not found"
+	fi
     #echo "$1 key is in DB"
   #else
     #echo "$1 key is not in DB"

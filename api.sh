@@ -39,6 +39,34 @@ case "$1" in
 		exit
 	fi
 ;;
+"change") 
+	#echo "Found set option"
+	key="$2"
+	value="$3"
+	if is_empty_key $key && is_empty_value $value; then
+		db_change $key $value
+	else
+		exit
+	fi
+;;
+"remove") 
+	#echo "Found set option"
+	key="$2"
+	if is_empty_key $key; then
+		res=$(db_remove $key)
+	else
+		exit
+	fi
+;;
+"get") 
+	#echo "Found set option"
+	key="$2"
+	if is_empty_key $key; then
+		db_get $key
+	else
+		exit
+	fi
+;;
 *)
 	echo "$1 is not a option"
 ;;
