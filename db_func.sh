@@ -4,6 +4,7 @@ DATABASE_FILE=.database
 
 let MAX_SIZE_OF_KEY=10
 let MAX_SIZE_OF_VALUE=10
+#let NULL="Not found"
 
 function check_key() {
   if (( "$(expr length "$1")" > "$MAX_SIZE_OF_KEY" )); then
@@ -51,7 +52,7 @@ function db_get() {
 	if [ ! -z "$value" ]; then
 		echo $value
 	else
-		echo "Not found"
+		echo NULL
 	fi
     #echo "$1 key is in DB"
   #else
@@ -75,7 +76,7 @@ function db_show() {
   lenght_of_list=$(wc -w <<< $list_of_keys)
   for key in $(sed -e "s/,[A-Za-z0-9]*//" "$DATABASE_FILE" | sort -u)
   do
-  if  [ ! -z "$(db_get $key)" ]; then
+  if  [ ! "$(db_get $key)" == "NULL" ]; then
     echo "$key,$(db_get $key)"
   fi
   done
@@ -88,5 +89,5 @@ function db_head() {
 
 function db_tail() {
   db_list=$(db_show)
-  echo $(tail +$1 <<< $db_list) | tr ' ' '\n'
+  echo $(tail -$1 <<< $db_list) | tr ' ' '\n'
 }

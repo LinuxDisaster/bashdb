@@ -67,6 +67,18 @@ case "$1" in
 		exit
 	fi
 ;;
+"show") 
+	#echo "Found set option"
+	db_show
+;;
+"head") 
+	rows="$2"
+	db_head $rows
+;;
+"tail") 
+	rows="$2"
+	db_tail $rows
+;;
 *)
 	echo "$1 is not a option"
 ;;
