@@ -36,6 +36,7 @@ function is_less() {
 
 function db_clear() {
   rm -f "$DATABASE_FILE"
+  touch $DATABASE_FILE
 }
 
 function db_set() {
