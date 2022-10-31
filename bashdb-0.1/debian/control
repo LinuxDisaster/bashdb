@@ -1,7 +1,7 @@
 Source: bashdb
 Section: unknown
 Priority: optional
-Maintainer: Golozubov <golozubovms@unknown>
+Maintainer: Golozubov Mikhail <golozubovms@rubezh.ru>
 Build-Depends: debhelper-compat (= 12)
 Standards-Version: 4.4.1
 Homepage: <insert the upstream URL, if relevant>
@@ -11,4 +11,5 @@ Homepage: <insert the upstream URL, if relevant>
 Package: bashdb
 Architecture: all
 Depends: ${misc:Depends}
-Description: Test task for KB-1
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>
