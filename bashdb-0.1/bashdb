@@ -80,8 +80,10 @@ case "$1" in
 				echo "$key,$(db_get $key)"
 			done
 		else
-			echo "$1 is not a option"
-			exit
+			for key in "$@"
+			do
+				echo "$key,$(db_get $key)"
+			done
 		fi
 	fi
 ;;
