@@ -9,7 +9,7 @@ function open_file() {
 	source "$FILE"
 }
 
-DB_FUNC="/usr/bin/db_func.sh"
+DB_FUNC="./db_func.sh"
 open_file $DB_FUNC
 
 function is_empty_key() {

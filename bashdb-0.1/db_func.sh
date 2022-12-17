@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DATABASE_FILE=~/.database
+DATABASE_FILE=./.database
 
 let MAX_SIZE_OF_KEY=128
 let MAX_SIZE_OF_VALUE=2048
